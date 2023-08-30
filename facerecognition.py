@@ -22,7 +22,6 @@ try:
     import face_recognition_models
 except Exception:
     print("Please install `face_recognition_models` with this command before using `face_recognition`:\n")
-    print("pip install git+https://github.com/ageitgey/face_recognition_models")
     quit()
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
@@ -263,19 +262,7 @@ def compare_faces(known_face_encodings, face_encoding_to_check, tolerance=0.4):
 obama_image = load_image_file("./Rohit.jpeg")
 obama_face_encoding = face_encodings_(obama_image)[0]
 
-"""
-# Load a second sample picture and learn how to recognize it.
-biden_image = load_image_file("")
-biden_face_encoding = face_encodings_(biden_image)[0]
 
-third_image = load_image_file("")
-third_face_encoding = face_encodings_(obama_image)[0]
-
-fourth_image = load_image_file(".")
-fourth_face_encoding = face_encodings_(obama_image)[0]
-
-
-"""
 
 
 # Create arrays of known face encodings and their names
@@ -286,14 +273,8 @@ known_face_encodings = [
  #   fourth_face_encoding
 ]
 
-known_face_names = [
-    "Rohit"#,
- #   "vinayak",
-  #  "chinmayee",
-   # "Anusha"
 
-]
-arduino=serial.Serial('COM4', 9600)
+arduino=serial.Serial('COM4', 9600)  # select the comp port ur micro controller connected 
 
 #change to your ESP32-CAM ip
 url="http://172.22.95.115:81/stream"
@@ -358,21 +339,22 @@ while True:
 
             
             # Display the resulting image
-            cv2.imshow('imRobo', frame)
+            cv2.imshow('ur_string', frame)
 
             print(name,"checking faces. . . .",checkname)
             if checkname != "NA": 
-                if name=="Rohit":
+                if name=="user1":
                     #arduino.write(name.encode("utf-8"))
                     arduino.write(b'1')
+                    
                     print(name)
-                elif name=="Vinayak":
+                elif name=="user2":
                     arduino.write(b'2')
                     print(name)
-                elif name=="Chinmayee":
+                elif name=="user2":
                     arduino.write(b'3')
                     print(name)
-                elif name=="Anusha":
+                elif name=="user3":
                     arduino.write(b'4') 
                     print(name) 
                 elif checkname== "dn":
