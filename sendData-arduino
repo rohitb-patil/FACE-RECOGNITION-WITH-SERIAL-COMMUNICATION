@@ -1,0 +1,52 @@
+# Importing required libraries/modules.
+import serial  # Used for serial communication between Python and Arduino.
+import time    # Provides various time-related functions.
+
+# Establish a connection to the Arduino board on COM4 port with a baud rate of 9600.
+arduino = serial.Serial('COM4', 9600)
+# Waiting 2 seconds to ensure the serial connection is fully established.
+time.sleep(2)
+
+# Prompt the user for input.
+print("Enter 1 to turn ON LED and 0 to turn OFF LED")
+
+# This is a hardcoded value of 1 for demonstration. 
+# In a real-world application, you'd probably use input() to get the value from the user.
+value = 1
+
+# For demonstration purposes, the data from the user is hardcoded to '1'. 
+# In practice, you'd get this from the user using input().
+datafromUser = '1'  #input()
+
+# Check the user input.
+if datafromUser == '1':  # If the user input is '1'...
+    arduino.write(b'Hi')  # Send 'Hi' to the Arduino.
+    print("LED  turned ON")  # Notify that the LED is turned on.  
+elif datafromUser == '0':  # If the user input is '0'...
+    arduino.write(b'Bye')  # Send 'Bye' to the Arduino.
+    print("LED turned OFF")  # Notify that the LED is turned off.
+
+# Read a line from the Arduino. This is presumably a response from the Arduino after processing the command.
+data = arduino.readline()    
+# Decode the received data from bytes to a string and print it.
+print(data.decode('utf-8'))    
+
+# Wait for 15 seconds. This might be done to simulate some delay or wait for some real-world event.
+time.sleep(15)
+
+# Again, for demonstration purposes, the data from the user is hardcoded to '0'.
+# In practice, you'd get this from the user using input().
+datafromUser = '0'  #input()
+
+# Check the user input again.
+if datafromUser == '1':
+    arduino.write(b'Hi')
+    print("LED  turned ON")   
+elif datafromUser == '0':
+    arduino.write(b'bye')  # Note: 'bye' here is lowercase, unlike 'Bye' earlier.
+    print("LED turned OFF")
+
+# Read another line from the Arduino, again, presumably a response after processing the command.
+data = arduino.readline()
+# Decode and print the received data.
+print(data.decode('utf-8'))
