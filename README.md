@@ -34,3 +34,7 @@ A fully functional robot capable of visually recognizing individuals from a pre-
 
 ## Future Scope:
 Enhancements could include integrating more complex deep learning models for improved recognition accuracy, expanding the pre-trained dataset, and implementing additional interactive features like voice recognition or personalized greetings based on individual profiles.
+
+
+# REFERENCES
+- https://github.com/ageitgey/face_recognition_models
