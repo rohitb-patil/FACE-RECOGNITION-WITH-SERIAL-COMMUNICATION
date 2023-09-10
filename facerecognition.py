@@ -259,7 +259,7 @@ def compare_faces(known_face_encodings, face_encoding_to_check, tolerance=0.4):
 #video_capture = cv2.VideoCapture(1)
 
 # Load a sample picture and learn how to recognize it.
-obama_image = load_image_file("./Rohit.jpeg")
+obama_image = load_image_file("path")
 obama_face_encoding = face_encodings_(obama_image)[0]
 
 
