@@ -1,5 +1,5 @@
 # FACE-RECOGNITION-WITH-SERIAL COMMUNICATION
-
+<img src="gt_2009_001858.png" alt="Image" style="width:200px;height:150px;">
 ## Project Title:
 Interactive Robot with Python-based Face Recognition System
 
