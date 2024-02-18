@@ -49,12 +49,16 @@ This file contains the initialization code for integrating ESP32-based webcams i
 
 
 <figure>
-  <img src="SBC-ESP32-Cam_1.png" alt="Image" style="width:300px;height:400px;">
-  <figcaption>Physical Model for face recognition.</figcaption>
+  <img src="SBC-ESP32-Cam_1.png" alt="Image 1" style="width:300px;height:400px;">
+  <figcaption>Physical Model for Face Recognition</figcaption>
 </figure>
 
+<figure>
+  <img src="robo.png" alt="Image 2" style="width:300px;height:400px;">
+  <figcaption>Second Image Description</figcaption>
+</figure>
 Requirements:
 - Arduino IDE  version 2.0 and above
-- Arduino Mega 2560 or other Arduino boards.
+- Arduino board and FT232 USB DRIVER.
 - Compatible libraries and dependencies
 
