@@ -49,7 +49,7 @@ This file contains the initialization code for integrating ESP32-based webcams i
 
 
 <figure>
-  <img src="robo.png" alt="Image" style="width:300px;height:600px;">
+  <img src="SBC-ESP32-Cam_1.png" alt="Image" style="width:300px;height:400px;">
   <figcaption>Physical Model for face recognition.</figcaption>
 </figure>
 
