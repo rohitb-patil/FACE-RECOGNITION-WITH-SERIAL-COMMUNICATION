@@ -3,7 +3,10 @@
 ## Project Title:
 Interactive Robot with Python-based Face Recognition System
 
-<img src="robo.png" alt="Image" style="width:300px;">
+<figure>
+  <img src="robo.png" alt="Image" style="width:300px;height:800px;">
+  <figcaption>Physical Model for face recognition.</figcaption>
+</figure>
 
 ## Objective:
 To design and implement an interactive robot equipped with a face recognition capability using a Python-based model. The robot will recognize and greet identified individuals based on pre-trained facial data.
