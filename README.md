@@ -8,7 +8,7 @@ Interactive Robot with Python-based Face Recognition System
   <figcaption>Physical Model for face recognition.</figcaption>
 </figure>
 
-https://github.com/rohitb-patil/FACE-RECOGNITION-WITH-SERIAL-COMMUNICATION/assets/143337294/465f9f96-a446-4395-aed3-a4e6fae1ce54
+https://github.com/rohitb-patil/FACE-RECOGNITION-WITH-SERIAL-COMMUNICATION/assets/143337294/11ca227c-7ad7-4e23-a08e-668cf8c1ff0b
 
 ## Project Description
 
