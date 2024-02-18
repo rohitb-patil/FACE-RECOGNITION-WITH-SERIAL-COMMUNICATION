@@ -47,21 +47,11 @@ This Arduino sketch (`arduinoserial`) is designed to receive commands from a Pyt
 ## ESP32 Webcam Integration
 This file contains the initialization code for integrating ESP32-based webcams into the system. It ensures proper setup and communication between the Python script and the ESP32 devices.
 
+<figure>
+  <img src="SBC-ESP32-Cam_1.png" alt="Image" style="width:300px;height:400px;">
+  <figcaption>Physical Model for face recognition.</figcaption>
+</figure>
 
-<div style="display: flex; justify-content: space-between;">
-    <div style="flex: 1;">
-        <figure>
-            <img src="SBC-ESP32-Cam_1.png" alt="Image 1" style="width:300px;height:400px;">
-            <figcaption>Physical Model for Face Recognition</figcaption>
-        </figure>
-    </div>
-    <div style="flex: 1;">
-        <figure>
-            <img src="robo.png" alt="Image 2" style="width:300px;height:400px;">
-            <figcaption>Second Image Description</figcaption>
-        </figure>
-    </div>
-</div>
 
 
 Requirements:
