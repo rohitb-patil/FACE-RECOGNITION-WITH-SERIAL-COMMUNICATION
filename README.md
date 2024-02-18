@@ -3,7 +3,7 @@
 ## Project Title:
 Interactive Robot with Python-based Face Recognition System
 
-Co-authored by [Co-Author 1](https://github.com/chinmayeebl/facerecognition_with_serialcommunication/tree/main).
+Co-authored by [Co-Author 1](https://github.com/chinmayeebl).
 
 <figure>
   <img src="robo.png" alt="Image" style="width:300px;height:600px;">
