@@ -1,0 +1,97 @@
+// This code is for serial communication between python and arduino serially which then actuates the peripherals (lcd and servo motor).
+#include <LiquidCrystal.h>
+#include <Servo.h>
+
+int datafromUser=0,ledflag=0,idx=0;
+char angle_str[10]; 
+Servo myservo;
+int pos = 0;    // variable to store the servo position
+
+// initialize the library by associating any needed LCD interface pin
+// with the arduino pin number it is connected to
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode( LED_BUILTIN , OUTPUT );
+  Serial.begin(9600);
+
+  // set up the LCD's number of columns and rows:
+  lcd.begin(16, 2);
+  // Print a message to the LCD.
+  lcd.print(" HI! I'm IRobo ");
+
+  myservo.attach(10);  // attaches the servo on pin 9 to the servo object
+}
+
+void loop() {
+
+  lcd.setCursor(0, 1);  
+  
+  // put your main code here, to run repeatedly:
+  while(Serial.available() > 0)
+  {
+    datafromUser=Serial.read();
+    Serial.println(char(datafromUser));
+
+    if(char(datafromUser) == '1'||char(datafromUser) == '2'||char(datafromUser) == '3'||char(datafromUser) == '4'||char(datafromUser) == '7'||char(datafromUser) == '8'||char(datafromUser) == '9')
+    {
+      ledflag ='1';      
+    //  angle_str[idx] = datafromUser; 
+    //  idx++;
+    }else{
+      ledflag ='0';
+     // angle_str[idx] = datafromUser;       
+     // idx++;
+    }
+  }
+
+  if(ledflag == '1')
+  {
+    digitalWrite( LED_BUILTIN , HIGH );  
+    lcd.clear();
+    if(char(datafromUser) == '1'){
+      lcd.print("This is Rohit");
+    }else if(char(datafromUser) == '2'){
+      lcd.print("This is Vinayak");
+    }else if(char(datafromUser) == '3'){
+      lcd.print("This is Chinmaye");
+    }else if(char(datafromUser) == '4'){
+      lcd.print("This is Anusha");
+    }else if(char(datafromUser) == '7'){
+      lcd.print("This is Kaushik ");
+       lcd.setCursor(0,1);
+      lcd.print("Mallibhat Sir");
+    }else if(char(datafromUser) == '8'){
+      lcd.print("This is H O D ");
+      lcd.setCursor(0,1);
+      lcd.print(" Vijaylakshmi ");
+    }else if(char(datafromUser) == '9'){
+      lcd.print("This is V C ");
+      lcd.setCursor(0,1);
+      lcd.print("DR ASHOK SHETTAR");
+    
+    }
+    ledflag=-1;
+  {
+    for (pos = 0; pos <= 90; pos += 1) 
+    
+      // goes from 0 degrees to 180 degrees
+    
+      // in steps of 1 degree
+      myservo.write(pos);              // tell servo to go to position in variable 'pos'
+      delay(15);                       // waits 15ms for the servo to reach the position
+    }
+  }
+  else if(ledflag == '0')
+  {
+   // digitalWrite( LED_BUILTIN, LOW);
+    lcd.clear();
+    if(char(datafromUser) == '5')
+      lcd.print("Sorry,who are U?");
+    else
+      lcd.print("HI I'm I Robo");  
+    ledflag=-2;
+  } 
+}
