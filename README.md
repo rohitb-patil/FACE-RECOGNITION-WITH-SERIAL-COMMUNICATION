@@ -16,8 +16,9 @@ https://github.com/rohitb-patil/FACE-RECOGNITION-WITH-SERIAL-COMMUNICATION/asset
 
 This project combines three key components: 
 1. **Facial Recognition Model Implementation**: We have developed a facial recognition model to identify individuals.
-2. **Python-Arduino Integration via Serial Communication**: Python scripts are interfaced with Arduino microcontrollers using serial communication, enabling seamless interaction between the two platforms.
-3. **Peripheral Integration with Arduino**: Various peripherals such as LCD displays and servo motors are interfaced with Arduino, enhancing the functionality and capabilities of the system.
+2. ESP32 webcam integration: Incorporation of ESP32-based webcams, enabling real-time video input for the facial recognition model.
+3. **Python-Arduino Integration via Serial Communication**: Python scripts are interfaced with Arduino microcontrollers using serial communication, enabling seamless interaction between the two platforms.
+4. **Peripheral Integration with Arduino**: Various peripherals such as LCD displays and servo motors are interfaced with Arduino, enhancing the functionality and capabilities of the system.
 
 
 # Facerecognise.py
@@ -42,4 +43,18 @@ This Arduino sketch (`arduinoserial`) is designed to receive commands from a Pyt
 - Arduino IDE  version 2.0 and above
 - Arduino Mega 2560 or other Arduino boards.
 
+
+## ESP32 Webcam Integration
+This file contains the initialization code for integrating ESP32-based webcams into the system. It ensures proper setup and communication between the Python script and the ESP32 devices.
+
+
+<figure>
+  <img src="robo.png" alt="Image" style="width:300px;height:600px;">
+  <figcaption>Physical Model for face recognition.</figcaption>
+</figure>
+
+Requirements:
+- Arduino IDE  version 2.0 and above
+- Arduino Mega 2560 or other Arduino boards.
+- Compatible libraries and dependencies
 
