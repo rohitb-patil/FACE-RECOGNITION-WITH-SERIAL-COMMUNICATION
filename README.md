@@ -4,7 +4,7 @@
 Interactive Robot with Python-based Face Recognition System
 
 <figure>
-  <img src="robo.png" alt="Image" style="width:300px;height:800px;">
+  <img src="robo.png" alt="Image" style="width:300px;height:600px;">
   <figcaption>Physical Model for face recognition.</figcaption>
 </figure>
 
