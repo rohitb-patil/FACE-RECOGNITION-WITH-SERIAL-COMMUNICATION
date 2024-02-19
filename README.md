@@ -1,7 +1,7 @@
 # FACE-RECOGNITION-WITH-SERIAL COMMUNICATION
 
 ## Project Title:
-[![YouTube](robo.png)](https://universe.roboflow.com/sih-clucx/camoflauge-object-detction)
+
 Interactive Robot with Python-based Face Recognition System
 
 Co-authored by [Co-Author 1](https://github.com/chinmayeebl).
